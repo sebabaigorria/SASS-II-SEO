@@ -1,12 +1,45 @@
-.espacio{
-    padding: 100px;
+/*IMPORT*/
+@import "css/bootstrap.css";
+@import "estilos.css";
+/********************
+EXTENDS AL NAVEGADOR
+********************/
+span, .span-nav {
+  width: 400px;
+  height: 150px;
+  background-color: green;
+  text-align: center;
+  color: black;
+  border-radius: 20px;
+  border: 2 px solid black;
 }
 
-.bg-{
-    background-image: linear-gradient(to left, red, black);
+.span-nav {
+  background-color: blue;
 }
 
-.color{
-    color: gray;
+/***********
+MIXINS AL BODY
+************/
+.main {
+  width: 550px;
+  height: 275px;
+  border: solid black;
 }
 
+.body {
+  width: 800px;
+  height: 350px;
+  border: solid black;
+}
+
+/*MAPS*/
+.footer-footer {
+  background-color: red;
+}
+
+.footer-main {
+  background-color: purple;
+}
+
+/*# sourceMappingURL=estilos.css.map */
