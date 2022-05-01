@@ -1,0 +1,64 @@
+/*IMPORT*/
+
+@import "css/bootstrap.css";
+@import "estilos.css"; 
+
+
+
+ /********************
+EXTENDS AL NAVEGADOR
+********************/
+
+span{
+    width: 400px;
+    height: 150px;
+    background-color: green;
+    text-align: center;
+    color: black;
+    border-radius: 20px;
+    border: 2 px solid black;
+}
+
+.span-nav{
+    @extend span;
+    background-color: blue;
+}
+
+/***********
+MIXINS AL BODY
+************/
+
+
+@mixin cambio($ancho, $altura) {
+    // fragmento que se imprime
+    width: $ancho;
+    height: $altura;
+    border: solid black;
+}
+
+.main{
+    @include cambio(550px, 275px);
+}
+.body{
+    @include cambio(800px, 350px);
+}
+
+
+/*MAPS*/
+
+$mapa:(
+    /*clave: valor*/
+    footer: red,
+    main: purple,
+);
+ 
+@each $nombres, $color in $mapa {
+ // fragmento que repite
+ .footer-#{$nombres} {
+     background-color: $color;
+ }    
+ }
+
+
+
+
